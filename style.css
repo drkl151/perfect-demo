@@ -2,20 +2,56 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
 }
 .logo-block {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-self: center;
   margin-top: 40px;
+  align-items: center;
+  padding: 0 40px;
 }
 .logo {
-  width: 150px;
+  width: 20%;
   border: 1px solid black;
   border-radius: 50%;
 }
+h2 {
+  font-size: 30px;
+}
+.msg {
+  width: 10%;
+}
 .YMK-icon {
-    position: relative;
-    left: 50%;
-    top: 50%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+
+@media all and (min-width: 980px) {
+  .logo-block {
+    justify-content: center;
+  }
+
+  .msg,
+  h2 {
+    display: none;
+  }
+
+  .logo {
+    width: 200px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 400px) {
+  h2 {
+    font-size: 16px;
+  }
 }
