@@ -7,7 +7,6 @@
 
 //       const windowWidth = window.innerWidth;
 
-
 //       const btnWidth = btn.offsetWidth;
 
 //       const centerX = (windowWidth - btnWidth) / 2;
@@ -18,14 +17,21 @@
 //   }, 10);
 // });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var links = document.querySelectorAll('a[href^="https://www.instagram.com"]');
-    links.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            window.open(link.href, '_blank');
-        });
+document.addEventListener('DOMContentLoaded', function () {
+  var links = document.querySelectorAll(
+    'header a[href^="https://www.instagram.com"]'
+  );
+  links.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      if (
+        link.href.includes('/ne_botan_glasses') ||
+        link.href.includes('/direct/t/100608811340939')
+      ) {
+        window.open(link.href, '_blank');
+      } else {
+        window.open(link.href, '_blank');
+      }
     });
+  });
 });
-
-  
