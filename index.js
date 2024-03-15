@@ -18,12 +18,11 @@
 // });
 
 document.addEventListener('DOMContentLoaded', function() {
-    var links = document.querySelectorAll('header a[href^="https://www.instagram.com"]');
+    var links = document.querySelectorAll('a[href^="https://www.instagram.com"]');
     links.forEach(function(link) {
         link.addEventListener('click', function(event) {
             event.preventDefault();
-            var newWindow = window.open(link.href, '_blank');
-            newWindow.opener = null;
+            window.open(link.href, '_system');
         });
     });
 });
